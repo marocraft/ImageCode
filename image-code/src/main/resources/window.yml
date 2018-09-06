@@ -1,0 +1,8 @@
+Window:
+  name: Window
+  width: 600px
+  height: 1000px
+  Button:
+    name: Button
+    width: 300px
+    height: 100px

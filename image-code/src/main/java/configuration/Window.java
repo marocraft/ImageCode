@@ -1,5 +1,7 @@
 package configuration;
 
+import com.google.common.base.MoreObjects;
+
 public class Window {
 	private String name;
 	private String width;
@@ -40,6 +42,10 @@ public class Window {
 		this.button = button;
 	}
 	
-	
+	@Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this).add("name", name + "\n").add("width", width + "\n").add("height", height + "\n").add("button", button + "\n")
+                .toString();
+    }
 
 }
