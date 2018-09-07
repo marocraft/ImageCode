@@ -1,4 +1,4 @@
-package configuration;
+package ma.craft.imagecode.configuration;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -24,11 +24,14 @@ class Test {
 		return new Yaml().loadAs(new ByteArrayInputStream(ByteStreams.toByteArray(iputstream)), Window.class);
 	}
 	
+	
 	public static void main(String[] args) throws IOException {
 		Test loader = new Test();
 		Window win = loader.loadFile();
-			System.out.println(win);
+		if(win.getName().equals("window"));{
+			System.out.println("<view><view>");
 		}
+	}
 	}
 
 
