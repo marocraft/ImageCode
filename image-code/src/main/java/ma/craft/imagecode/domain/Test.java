@@ -1,4 +1,4 @@
-package ma.craft.imagecode.configuration;
+package ma.craft.imagecode.domain;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

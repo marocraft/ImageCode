@@ -1,4 +1,4 @@
-package ma.craft.imagecode.configuration;
+package ma.craft.imagecode.domain;
 
 import com.google.common.base.MoreObjects;
 
