@@ -29,7 +29,7 @@ public class ImageCodeApplication {
 		Generate gen = new Generate();
 		gen.generateTextFile();
 		
-		//Remlissage du fichier avec un commentaire au début 
+		//Remlissage du fichier avec un commentaire au début  
 		PushingCodeTextFile push = new PushingCodeTextFile();
 		push.pushCodeTextFile();
 		
