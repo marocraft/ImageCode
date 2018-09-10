@@ -1,0 +1,19 @@
+//code réact native
+import React, { Component } from 'react';
+import { button, View } from 'react-native';
+
+class ImageCode extends Component {
+render() {
+return (
+<View style={{
+Width:200,
+Height:50
+}}>
+        <button style={{
+
+Width:20,
+Height:100
+}}>
+button
+}}>
+<button style={{}}>

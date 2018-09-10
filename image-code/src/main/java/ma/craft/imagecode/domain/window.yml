@@ -1,7 +1,0 @@
-name: window
-width : 155px
-height: 199px
-button: 
-     name: button
-     width : 155px
-     height: 199px
