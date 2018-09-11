@@ -1,26 +1,22 @@
 package ma.craft.imagecode;
-import ma.craft.imagecode.generation.CodeGeneration;
-import ma.craft.imagecode.generation.CodeIndented;
-import ma.craft.imagecode.generation.Generate;
-
-import ma.craft.imagecode.generation.PushingCodeTextFile;
-import ma.craft.imagecode.parsing.Parsing;
-
 import java.io.IOException;
 
+import org.junit.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import ma.craft.imagecode.domain.Button;
 import ma.craft.imagecode.domain.Window;
+import ma.craft.imagecode.generation.CodeGeneration;
+import ma.craft.imagecode.generation.CodeIndented;
+import ma.craft.imagecode.generation.Generate;
+import ma.craft.imagecode.generation.PushingCodeTextFile;
+import ma.craft.imagecode.parsing.Parsing;
 
-@SpringBootApplication
+@SpringBootApplication 
 public class ImageCodeApplication {
-
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(ImageCodeApplication.class, args);
 
-		
 		Parsing loader = new Parsing();
 		Window win = loader.loadFile();
 		System.out.print(win);
@@ -46,4 +42,6 @@ public class ImageCodeApplication {
 		
 		
 	}
+	
+	
 }
