@@ -4,20 +4,34 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>ma.craft.devops</groupId>
-	<artifactId>devops</artifactId>
+	<groupId>ma.craft.imagecode</groupId>
+	<artifactId>ic-engine</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>image-code</name>
-	<description>project image code</description>
+	<name>image-code-engine</name>
+	<description>Image Code Engine module</description>
 	<developers>
 		<developer>
 			<id>AI</id>
 			<email>a.ibnouali@insea.ac.ma</email>
 			<name>Anass IBNOU ALI</name>
 		</developer>
-
+		<developer>
+			<id>MA</id>
+			<email></email>
+			<name>Mohamed Adbib</name>
+		</developer>
+		<developer>
+			<id>BE</id>
+			<email>ellaitebadia@gmail.com</email>
+			<name>Badia Elaite</name>
+		</developer>
+		<developer>
+			<id>SK</id>
+			<email>sallah.kokaina@gmail.com</email>
+			<name>Sallah KOKAINA</name>
+		</developer>
 	</developers>
 
 	<scm>
@@ -47,9 +61,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<guava.version>18.0</guava.version>
+		<junit.version>4.12</junit.version>
+		<lombok.version>1.18.2</lombok.version>
+		<lombok.maven.version>1.18.0.0</lombok.maven.version>
+		<spring-boot.version>2.0.4.RELEASE</spring-boot.version>
 		<jacoco-maven-plugin.version>0.7.4.201502262128</jacoco-maven-plugin.version>
 		<jacoco.it.execution.data.file>${project.build.directory}/jacoco-it.exec</jacoco.it.execution.data.file>
 		<jacoco.ut.execution.data.file>${project.build.directory}/jacoco.exec</jacoco.ut.execution.data.file>
@@ -78,12 +94,18 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>18.0</version>
+			<version>${guava.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -92,7 +114,20 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.0.4.RELEASE</version>
+				<version>${spring-boot.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok-maven-plugin</artifactId>
+				<version>${lombok.maven.version}</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>delombok</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
@@ -123,6 +158,4 @@
 
 		</plugins>
 	</build>
-
-
 </project>
