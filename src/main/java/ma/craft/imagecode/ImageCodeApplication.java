@@ -1,7 +1,6 @@
 package ma.craft.imagecode;
 import java.io.IOException;
 
-import org.junit.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,15 +9,15 @@ import ma.craft.imagecode.generation.CodeGeneration;
 import ma.craft.imagecode.generation.CodeIndented;
 import ma.craft.imagecode.generation.Generate;
 import ma.craft.imagecode.generation.PushingCodeTextFile;
-import ma.craft.imagecode.parsing.Parsing;
+import ma.craft.imagecode.parsing.Parser;
 
 @SpringBootApplication 
 public class ImageCodeApplication {
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(ImageCodeApplication.class, args);
 
-		Parsing loader = new Parsing();
-		Window win = loader.loadFile();
+		Parser loader = new Parser();
+		Window win = loader.parseFile();
 		System.out.print(win);
 		
 		//creation d un fichier text vide 
@@ -36,11 +35,6 @@ public class ImageCodeApplication {
 		//indenter le fichier text
 		CodeIndented codeind = new CodeIndented();
 		codeind.readFile();
-		//
-		
-
-		
-		
 	}
 	
 	
