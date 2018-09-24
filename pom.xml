@@ -25,7 +25,7 @@
 		<developer>
 			<id>BE</id>
 			<email>ellaitebadia@gmail.com</email>
-			<name>Badia Elaite</name>
+			<name>Badia Ellaite</name>
 		</developer>
 		<developer>
 			<id>SK</id>
@@ -76,7 +76,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

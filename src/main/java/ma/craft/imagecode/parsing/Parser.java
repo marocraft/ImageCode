@@ -12,22 +12,17 @@ import com.google.common.io.ByteStreams;
 import ma.craft.imagecode.domain.Window;
 
 public class Parser {
-	
+
+
 	public URL getFileURL() throws IOException {
-		URL url = getClass().getClassLoader().getResource("window.yml");
+		URL url = getClass().getResource("/window.yml");
+		url.openStream().close();
 		return url;
 	}
+
 	public Window parseFile() throws IOException {
 		URL url = getFileURL();
 		InputStream iputstream = url.openConnection().getInputStream();
 		return new Yaml().loadAs(new ByteArrayInputStream(ByteStreams.toByteArray(iputstream)), Window.class);
 	}
-
-	public static void main(String[] args) throws IOException {
-		Parser loader = new Parser();
-		Window win = loader.parseFile();
-		System.out.println(win.getButton().getHeight());
-
-	}
-
 }
