@@ -1,5 +1,7 @@
 # ImageCode
 Transform an image into code
+## Description
+
 # Contributing to Image-Code-Engine
 First of all, thank you for taking the time to contribute! 👍 🎉
 ## How to Contribute
