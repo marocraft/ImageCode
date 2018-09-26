@@ -2,18 +2,33 @@
 ImageCode is an open source projet open Source that transform an image into code. ImageCode is devided into two parts: 
 1. IC Brain Engine
 2. IC Code Engine
+## Example
+
+### Here's the generated code:
+```javascript
+import React, { Component } from 'react';
+import { button, View } from 'react-native';
+
+export default class ImageCode extends Component {
+render() {
+    return (
+        <View style={{
+            Width:200,
+            Height:50
+         }}>
+          <button style={{
+            Width:20,
+            Height:100
+          }}>
+             button
+          </button>
+          </View>);}}
+```
 # Contributing to Image-Code-Engine
 First of all, thank you for taking the time to contribute! 👍 🎉
 ## How to Contribute
 ### Discuss
 If you have a question, join us on [#imagecode](https://agile-irb-bnp.slack.com/messages/CCJFHDRDK/) on slack. you find related issues and discussions. You can, also, ask us any questions, you are welcome. This helps us to improve the project.
-### Create a Ticket
-Reporting an issue or making a feature request is a great way to contribute. Your feedback and the conversations that result from it provide a continuous flow of ideas.
-If you create a ticket, please provide a self-sufficient description in the ticket. We understand this is extra work but the issue tracker is an important place of record for design discussions and decisions that can often be referenced long after the fix version, for example to revisit decisions, to understand the origin of a feature, and so on.
-### Ticket Lifecycle
-When an issue is first created, it may not be assigned and will not have a fix version. Within a day or two, the issue is assigned to a specific committer and the target version is set to "Waiting for Triage". The committer will then review the issue, ask for further information if needed, and based on the findings, the issue is either assigned a fix version or rejected.
-When a fix is ready, the issue is marked "Resolved" and may still be re-opened. Once a fix is released, the issue is permanently "Closed". If necessary, you will need to create a new, related ticket with a fresh description.
-
 ### Steps to contribution 
 ### Step 1: Fork the project & clone locally
 You can fork the project by pressing the “fork” button on Github. This will create a copy of the repository in your own GitHub account. 
