@@ -1,5 +1,5 @@
 # Description
-ImageCode is an open source projet open Source that transform an image into code. ImageCode is devided into two parts: 
+ImageCode is an open source projet that transform an image into code. ImageCode is devided into two parts: 
 1. IC Brain Engine
 2. IC Code Engine
 ## Example
