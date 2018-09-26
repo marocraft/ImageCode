@@ -30,7 +30,7 @@ First of all, thank you for taking the time to contribute! 👍 🎉
 ## How to Contribute
 ### Discuss
 If you have a question, join us on [#imagecode](https://agile-irb-bnp.slack.com/messages/CCJFHDRDK/) on slack. you find related issues and discussions. You can, also, ask us any questions, you are welcome. This helps us to improve the project.
-### Steps to contribution 
+## Steps to contribution 
 ### Step 1: Fork the project & clone locally
 You can fork the project by pressing the “fork” button on Github. This will create a copy of the repository in your own GitHub account. 
 Now you need a copy locally, so find the “SSH clone URL” in the right hand column and use that to clone locally using a terminal.
