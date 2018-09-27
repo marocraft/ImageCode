@@ -63,6 +63,11 @@ $ git push -u origin feature/refactoring
 ```
 Once you push your branch to the origin remote, you can swap  back to the browser and navigate to your fork and you’ll see that your new branch is listed at the top with a handy “Compare & pull request” button.
 Go ahead and press the button.
+## Next fonctionalities
+This is a work in progress, so there are a few things it doesn't do well. We have a long roadmap of features to add.
+For example,we aim to add a web interface where the user could authentificate, upload his json file, press the submit button and get the React natice code online. So,he could upload and download and the js file and integrate in in his React native project.
+
+
 
 
 
