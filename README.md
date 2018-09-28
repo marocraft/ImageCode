@@ -3,7 +3,7 @@ ImageCode is an open source projet that transform an image into code. ImageCode 
 1. IC Brain Engine
 2. IC Code Engine
 ## Example
-![myimage-alt-tag](https://github.com/marocraft/ImageCode/blob/feature/refactoring/Assets/image%20code%20ppt.png?raw=true)
+![myimage-alt-tag](https://github.com/marocraft/ImageCode/blob/feature/refactoring/Assets/capture-read-me.png)
 You can see that it's not perfect - but it provides a really good starting point, and it's getting better all the time!
 ### Here's the generated code:
 ```javascript
