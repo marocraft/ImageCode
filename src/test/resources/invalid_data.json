@@ -1,0 +1,99 @@
+{
+	"name": "window",
+	"type": "container",
+	"confidence": 0.97,
+	"x": 0,
+	"y": 0,
+	"width": "360",
+	"height": 780,
+	"children": [
+		{
+			"name": "ok",
+			"type": "button",
+			"confidence": 0.97,
+			"x": 20,
+			"y": 100,
+			"width": 200,
+			"height": 50
+		},
+		{
+			"name": "check",
+			"type": "checkbox",
+			"confidence": 0.87,
+			"x": 4,
+			"y": 10,
+			"width": 100,
+			"height": 100
+		},
+		
+		{
+			"name": "window",
+			"type": "container",
+			"confidence": 0.74,
+			"x": 200,
+			"y": 300,
+			"width": 1000,
+			"height": 500,
+			"children": 
+	[
+  	{
+  		"name": "create",
+  		"type": "button",
+  		"confidence": 0.97,
+  		"x": 20,
+  		"y": 100,
+  		"width": 200,
+  		"height": 50
+  	},
+  	{
+  	  	"name": "check",
+  		"type": "checkbox",
+  		"confidence": 0.87,
+  		"x": 4,
+  		"y": 10,
+  		"width": 100,
+  		"height": 100
+  	},
+  	{
+  	  	"name": "window",
+  		"type": "container",
+  		"confidence": 0.74,
+  		"x": 200,
+  		"y": 300,
+  		"width": 1000,
+  		"height": 500,
+  		"children": [{
+		  	  	"name": "choise",
+		  		"type": "radio-button",
+		  		"confidence": 0.43,
+		  		"x": 4,
+		  		"y": 10,
+		  		"width": 50,
+		  		"height": 50
+		  	}
+  		]
+},
+{
+  	  	"name": "window",
+  		"type": "container",
+  		"confidence": 0.74,
+  		"x": 200,
+  		"y": 300,
+  		"width": 1000,
+  		"height": 500,
+  		"children": [{
+		  	  	"name": "choise",
+		  		"type": "radio-button",
+		  		"confidence": 0.43,
+		  		"x": 4,
+		  		"y": 10,
+		  		"width": 50,
+		  		"height": 50
+		  	}
+  		]
+}
+]
+}
+]
+
+}
