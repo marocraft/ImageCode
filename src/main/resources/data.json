@@ -1,7 +1,7 @@
 {
 	"name": "window",
 	"type": "container",
-	"confidence" : "0.97",
+	"confidence" : 0.97,
 	"x": 0,
 	"y": 0,
 	"width": 360,
