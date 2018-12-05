@@ -2,11 +2,7 @@ package ma.craft.imagecode.generation;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Stream;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -17,7 +13,7 @@ import ma.craft.imagecode.domain.Container;
 import ma.craft.imagecode.domain.Template;
 
 public class TemplateLoader {
-
+/*
 	public static void main(String[] args) throws IOException {
 		String filePath = "C:\\Users\\ANASS\\git\\ImageCodeProject\\ImageCode\\src\\main\\resources\\templates\\view.template";
 		String content = new String(Files.readAllBytes(Paths.get("C:\\\\Users\\\\ANASS\\\\git\\\\ImageCodeProject\\\\ImageCode\\\\src\\\\main\\\\resources\\\\templates\\\\view.template")));
@@ -26,7 +22,7 @@ public class TemplateLoader {
 		System.out.println(content.replaceAll("#width", "test").replaceAll("#name", "test").replaceAll("#height","test"));
 	}
 
-	// Read file content into string with - Files.lines(Path path, Charset cs)
+	 Read file content into string with - Files.lines(Path path, Charset cs)
 
 	private static String readTemplateFile(String filePath) {
 		StringBuilder contentBuilder = new StringBuilder();
@@ -37,8 +33,8 @@ public class TemplateLoader {
 			e.printStackTrace();
 		}
 
-		return contentBuilder.toString().replaceAll("#width", "test").replaceAll("#name", "test").replaceAll("#height","test");
-	}
+		return contentBuilder.toString().replaceAll("#width", "test").replaceAll("#name", "test").replaceAll("#height","test");*/
+//	}
 
 	public void loadContainer(Container container) {
 

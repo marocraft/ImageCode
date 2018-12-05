@@ -13,18 +13,6 @@ import ma.craft.imagecode.domain.Child;
 import ma.craft.imagecode.domain.Container;
 
 public class Mapper {
-	public static void main(String[] args) {
-		
-		/*JSONSchema js= new JSONSchema()	;
-		Service ser = new Service();
-		Container cnt = ser.getContainer(js.readDataFile());
-		for (Child child : cnt.getChildren()) {
-			System.out.println(child.toString());
-			
-		}
-		*/
-	}
-
 	public Container getContainer(JSONObject json) {
 		ObjectMapper mapper = new ObjectMapper();
 		Container container = null;
