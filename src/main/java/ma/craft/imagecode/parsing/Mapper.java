@@ -13,38 +13,18 @@ import ma.craft.imagecode.domain.Child;
 import ma.craft.imagecode.domain.Container;
 
 public class Mapper {
-	public Container getContainer(JSONObject json) {
+
+	public Container getContainer(JSONObject json) throws JsonParseException, JsonMappingException, IOException {
+
 		ObjectMapper mapper = new ObjectMapper();
-		Container container = null;
-		try {
-			container = mapper.readValue(json.toString(), Container.class);
-		} catch (JsonParseException e) {
-
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-
-			e.printStackTrace();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return container;
+		return mapper.readValue(json.toString(), Container.class);
 	}
 
-	public List<Child> getAllChildreen(JSONObject json) {
+	public List<Child> getAllChildreen(JSONObject json) throws JsonParseException, JsonMappingException, IOException {
+
 		ObjectMapper mapper = new ObjectMapper();
-		Container container = null;
-		try {
-			container = mapper.readValue(json.toString(), Container.class);
-		} catch (JsonParseException e) {
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return container.getChildren();
+		return mapper.readValue(json.toString(), Container.class).getChildren();
+
 	}
 
 }

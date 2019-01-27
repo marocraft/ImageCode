@@ -2,7 +2,6 @@ package ma.craft.imagecode.generation;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -12,22 +11,22 @@ import ma.craft.imagecode.domain.Template;
 
 public class TemplateLoader {
 
-	public String loadContainer(Container container) {
+	public String loadContainer(Container container, String path) {
 
 		ClassLoader classLoader = TemplateLoader.class.getClassLoader();
-		classLoader.getResource("templates/view.template").getFile()
-				.replaceAll("#width", container.getWidth().toString())
+		classLoader.getResource(path).getFile().replaceAll("#width", container.getWidth().toString())
 				.replaceAll("#height", container.getHeight().toString()).replaceAll("#name", container.getName())
 				.replaceAll("#x", container.getX().toString()).replaceAll("#y", container.getY().toString());
+
 		return classLoader.toString();
 	}
 
-	public List<Child> loadChildren(Container container) {
-		List<Child> children = container.getChildren();
-		for (Child child : children) {
-
-		}
-		return children;
+	public String loadChilTemplate(Child child, String path) {
+		ClassLoader classLoader = TemplateLoader.class.getClassLoader();
+		classLoader.getResource(path).getFile().replaceAll("#width", child.getWidth().toString())
+				.replaceAll("#height", child.getHeight().toString()).replaceAll("#name", child.getName())
+				.replaceAll("#x", child.getX().toString()).replaceAll("#y", child.getY().toString());
+		return classLoader.toString();
 	}
 
 	public File readFile(String url) {
