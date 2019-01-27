@@ -1,36 +1,29 @@
 package ma.craft.imagecode.parsing;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.loader.SchemaLoader;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import org.springframework.beans.factory.annotation.Value;
 
 public class Parser {
-	@Value("${file.data.url}")
-	String dataUri;
-	@Value("${file.schema.url}")
-	String schemaUri;
-	@Value("${file.invalid.url}")
-	String invalidFileUri;
 
-
-	public JSONObject readSchemaFile() {
-		JSONObject jsonSchema = new JSONObject(new JSONTokener(Parser.class.getResourceAsStream(schemaUri)));
-		return jsonSchema;
+	public JSONObject readJsonFile(String path) throws JSONException, FileNotFoundException {
+		return new JSONObject(new JSONTokener(new FileInputStream(path)));
 
 	}
 
-	public JSONObject readDataFile() {
-		JSONObject jsonObject = new JSONObject(new JSONTokener(Parser.class.getResourceAsStream(dataUri)));
-		return jsonObject;
+	public Schema loadSchema(String path) throws JSONException, FileNotFoundException {
+		return SchemaLoader.load(this.readJsonFile(path));
 
 	}
 
-	public Schema loadSchema() {
-		Schema schema = SchemaLoader.load(this.readSchemaFile());
-		return schema;
-
+	public void validateSchema(String dataFile, String schemaFile) throws JSONException, FileNotFoundException {
+		Schema schema = SchemaLoader.load(this.readJsonFile(schemaFile));
+		schema.validate(this.readJsonFile(dataFile));
 	}
 
 }

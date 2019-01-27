@@ -19,16 +19,16 @@ public class Mapper {
 		try {
 			container = mapper.readValue(json.toString(), Container.class);
 		} catch (JsonParseException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
+
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return container;
 	}
 
@@ -38,15 +38,12 @@ public class Mapper {
 		try {
 			container = mapper.readValue(json.toString(), Container.class);
 		} catch (JsonParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		}
 		return container.getChildren();
 	}
 

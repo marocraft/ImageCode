@@ -12,23 +12,22 @@ import ma.craft.imagecode.domain.Template;
 
 public class TemplateLoader {
 
-	public void loadContainer(Container container) {
+	public String loadContainer(Container container) {
 
 		ClassLoader classLoader = TemplateLoader.class.getClassLoader();
 		classLoader.getResource("templates/view.template").getFile()
 				.replaceAll("#width", container.getWidth().toString())
-				.replaceAll("#height", container.getHeight().toString())
-				.replaceAll("#name", container.getName())
-				.replaceAll("#x", container.getX().toString())
-				.replaceAll("#y", container.getY().toString());
+				.replaceAll("#height", container.getHeight().toString()).replaceAll("#name", container.getName())
+				.replaceAll("#x", container.getX().toString()).replaceAll("#y", container.getY().toString());
+		return classLoader.toString();
 	}
 
-	public void loadChildren(Container container) {
+	public List<Child> loadChildren(Container container) {
 		List<Child> children = container.getChildren();
 		for (Child child : children) {
-			child.getConfidence();
 
 		}
+		return children;
 	}
 
 	public File readFile(String url) {

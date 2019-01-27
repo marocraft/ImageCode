@@ -5,8 +5,8 @@
   "x": 12,
   "y": 0,
   "width": 45,
-  "height": "50notAnumber",
-  "children":[
+  "height": 780,
+  "children": [
     {
       "name": "ok",
       "type": 12,
