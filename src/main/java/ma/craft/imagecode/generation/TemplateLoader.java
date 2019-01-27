@@ -14,10 +14,10 @@ public class TemplateLoader {
 	public String loadContainer(Container container, String path) {
 
 		ClassLoader classLoader = TemplateLoader.class.getClassLoader();
+
 		classLoader.getResource(path).getFile().replaceAll("#width", container.getWidth().toString())
 				.replaceAll("#height", container.getHeight().toString()).replaceAll("#name", container.getName())
 				.replaceAll("#x", container.getX().toString()).replaceAll("#y", container.getY().toString());
-
 		return classLoader.toString();
 	}
 
