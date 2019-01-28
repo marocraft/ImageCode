@@ -1,0 +1,4 @@
+<Checkbox
+            style={width: "#width", height: "#height } 
+			title="#name"
+</Checkbox>

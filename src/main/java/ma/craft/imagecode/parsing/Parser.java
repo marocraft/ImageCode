@@ -1,28 +1,29 @@
 package ma.craft.imagecode.parsing;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
-import org.yaml.snakeyaml.Yaml;
-
-import com.google.common.io.ByteStreams;
-
-import ma.craft.imagecode.domain.Window;
+import org.everit.json.schema.Schema;
+import org.everit.json.schema.loader.SchemaLoader;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 public class Parser {
 
+	public JSONObject readJsonFile(String path) throws JSONException, FileNotFoundException {
+		return new JSONObject(new JSONTokener(new FileInputStream(path)));
 
-	public URL getFileURL() throws IOException {
-		URL url = getClass().getResource("/window.yml");
-		url.openStream().close();
-		return url;
 	}
 
-	public Window parseFile() throws IOException {
-		URL url = getFileURL();
-		InputStream iputstream = url.openConnection().getInputStream();
-		return new Yaml().loadAs(new ByteArrayInputStream(ByteStreams.toByteArray(iputstream)), Window.class);
+	public Schema loadSchema(String path) throws JSONException, FileNotFoundException {
+		return SchemaLoader.load(this.readJsonFile(path));
+
 	}
+
+	public void validateSchema(String dataFile, String schemaFile) throws JSONException, FileNotFoundException {
+		Schema schema = SchemaLoader.load(this.readJsonFile(schemaFile));
+		schema.validate(this.readJsonFile(dataFile));
+	}
+
 }

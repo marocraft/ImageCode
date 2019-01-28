@@ -1,0 +1,58 @@
+{
+	"definitions": {
+		"container": {
+			"title": "container",
+			"description": "container",
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"confidence": {
+					"type": "number"
+				},
+				"x": {
+					"type": "integer"
+				},
+				"y": {
+					"type": "integer"
+				},
+				"width": {
+					"type": "integer"
+				},
+				"height": {
+					"type": "integer"
+				},
+				"children": {
+					"type": "array",
+					"items": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						},
+						"confidence": {
+							"type": "number"
+						},
+						"x": {
+							"type": "integer"
+						},
+						"y": {
+							"type": "integer"
+						},
+						"width": {
+							"type": "integer"
+						},
+						"height": {
+							"type": "integer"
+						}
+					}
+				}
+			}
+		}
+	}
+}
