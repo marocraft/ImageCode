@@ -7,12 +7,12 @@ import lombok.Data;
 @AllArgsConstructor
 public class Child {
 
-	public String name;
-	public String type;
-	public Float confidence;
-	public Integer x;
-	public Integer y;
-	public Integer width;
-	public Integer height;
+	private String name;
+	private String type;
+	private Float confidence;
+	private Integer x;
+	private Integer y;
+	private Integer width;
+	private Integer height;
 
 }
