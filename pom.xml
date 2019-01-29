@@ -66,7 +66,7 @@
 		<lombok.version>1.18.2</lombok.version>
 		<lombok.maven.version>1.18.0.0</lombok.maven.version>
 		<spring-boot.version>2.0.4.RELEASE</spring-boot.version>
-		<jacoco-maven-plugin.version>0.7.4.201502262128</jacoco-maven-plugin.version>
+		<jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
 		<jacoco.it.execution.data.file>${project.build.directory}/jacoco-it.exec</jacoco.it.execution.data.file>
 		<jacoco.ut.execution.data.file>${project.build.directory}/jacoco.exec</jacoco.ut.execution.data.file>
 	</properties>
