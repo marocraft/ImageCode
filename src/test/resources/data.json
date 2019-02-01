@@ -8,8 +8,8 @@
   "height": 780,
   "children": [
     {
-      "name": "ok",
-      "type": 12,
+      "name": "checkbox",
+      "type": "checkbox",
       "confidence": 0.97,
       "x": 20,
       "y": 100,
@@ -17,8 +17,8 @@
       "height": 50
     },
     {
-      "name": "check",
-      "type": "checkbox",
+      "name": "button",
+      "type": "button",
       "confidence": 0.87,
       "x": 4,
       "y": 10,
