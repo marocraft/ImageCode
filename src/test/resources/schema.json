@@ -33,7 +33,7 @@
               "type": "string"
             },
             "type": {
-              "type": "integer"
+              "type": "string"
             },
             "confidence": {
               "type": "number"
