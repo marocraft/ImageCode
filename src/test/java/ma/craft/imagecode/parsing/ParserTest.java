@@ -2,9 +2,7 @@ package ma.craft.imagecode.parsing;
 
 import java.io.FileNotFoundException;
 
-import org.everit.json.schema.Schema;
 import org.everit.json.schema.ValidationException;
-import org.everit.json.schema.loader.SchemaLoader;
 import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.Before;
@@ -34,25 +32,21 @@ public class ParserTest {
 	@Test
 	public void shouldLoadSchema() throws JSONException, FileNotFoundException {
 
-		Assert.assertNotNull(parser.readJsonFile(SCHEMA_URL));
+		Assert.assertNotNull(parser.loadSchema(SCHEMA_URL));
 
 	}
 
 	@Test
 	public void shouldValidJsonSchemas() throws FileNotFoundException {
 
-		Schema schema = SchemaLoader.load(parser.readJsonFile(SCHEMA_URL));
-		Assert.assertNotNull(schema);
-		schema.validate(parser.readJsonFile(DATA_FILE_URL));
+		parser.validateSchema(DATA_FILE_URL, SCHEMA_URL);
 
 	}
 
 	@Test(expected = ValidationException.class)
 	public void shouldThrownInvalidSchema() throws FileNotFoundException {
 
-		Schema schema = SchemaLoader.load(parser.readJsonFile(SCHEMA_URL));
-		Assert.assertNotNull(schema);
-		schema.validate(parser.readJsonFile(INVALID_DATA_FILE_URL));
+		parser.validateSchema(INVALID_DATA_FILE_URL, SCHEMA_URL);
 
 	}
 
