@@ -1,3 +1,10 @@
+
+
+# ImageCode
+![alt logo](https://github.com/marocraft/ImageCode/blob/master/Image1.png)
+
+Transform an image into code
+
 # Description
 ImageCode is an open source projet that transform an image into code. ImageCode is devided into two parts: 
 1. IC Brain Engine
@@ -68,10 +75,4 @@ Go ahead and press the button.
 ## Next fonctionalities
 This is a work in progress, so there are a few things it doesn't do well. We have a long roadmap of features to add.
 For example,we aim to add a web interface where the user could authentificate, upload his json file, press the submit button and get the React natice code online. So,he could upload and download and the js file and integrate in in his React native project.
-
-
-
-
-
-
 
