@@ -33,8 +33,24 @@ public class MapperTest {
 		container.setX(12);
 		container.setY(0);
 		container.setConfidence((float) 0.97);
-		Child checkbox = new Child("checkbox", "checkbox", (float) 0.97, 20, 100, 200, 50);
-		Child button = new Child("button", "button", (float) 0.87, 4, 10, 100, 100);
+
+		Child checkbox = new Child();
+		checkbox.setName("checkbox");
+		checkbox.setType("checkbox");
+		checkbox.setConfidence((float) 0.97);
+		checkbox.setX(20);
+		checkbox.setY(100);
+		checkbox.setWidth(200);
+		checkbox.setHeight(50);
+
+		Child button = new Child();
+		button.setName("button");
+		button.setType("button");
+		button.setConfidence((float) 0.87);
+		button.setX(4);
+		button.setY(10);
+		button.setWidth(100);
+		button.setHeight(100);
 		List<Child> children = new ArrayList<>();
 		children.add(checkbox);
 		children.add(button);

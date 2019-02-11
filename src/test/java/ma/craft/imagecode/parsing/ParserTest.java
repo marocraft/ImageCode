@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class ParserTest {
 
-	public static final String SCHEMA_URL = "schema.json";
+	public static final String SCHEMA_FILE_URL = "schema.json";
 	public static final String DATA_FILE_URL = "data.json";
 	public static final String INVALID_DATA_FILE_URL = "invalid_data.json";
 
@@ -32,21 +32,21 @@ public class ParserTest {
 	@Test
 	public void shouldLoadSchema() throws JSONException, FileNotFoundException {
 
-		Assert.assertNotNull(parser.loadSchema(SCHEMA_URL));
+		Assert.assertNotNull(parser.loadSchema(SCHEMA_FILE_URL));
 
 	}
 
 	@Test
 	public void shouldValidJsonSchemas() throws FileNotFoundException {
 
-		parser.validateSchema(DATA_FILE_URL, SCHEMA_URL);
+		parser.validateSchema(DATA_FILE_URL, SCHEMA_FILE_URL);
 
 	}
 
 	@Test(expected = ValidationException.class)
 	public void shouldThrownInvalidSchema() throws FileNotFoundException {
 
-		parser.validateSchema(INVALID_DATA_FILE_URL, SCHEMA_URL);
+		parser.validateSchema(INVALID_DATA_FILE_URL, SCHEMA_FILE_URL);
 
 	}
 
