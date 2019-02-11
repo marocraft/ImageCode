@@ -14,7 +14,7 @@ public class TemplateLoader {
 				.replaceAll("#x", container.getX().toString()).replaceAll("#y", container.getY().toString());
 	}
 
-	public String loadChilTemplate(Child child, String path) {
+	public String loadChildTemplate(Child child, String path) {
 
 		String result = readTemplate(path).toString();
 		return result.replaceAll("#width", child.getWidth().toString())
