@@ -1,0 +1,4 @@
+<View 
+	style={width: "#width", height: "#height } 
+	title="#name"
+ />
